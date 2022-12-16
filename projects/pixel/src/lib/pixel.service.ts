@@ -140,8 +140,8 @@ export class PixelService {
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    ${pixelId.map((id) => fbq('init', id))};
-    fbq('track', 'PageView');
+    ${pixelId.map((id) => "fbq('init', id);")}
+      fbq('track', 'PageView');
     `;
 
     const scriptElement = this.renderer.createElement('script');

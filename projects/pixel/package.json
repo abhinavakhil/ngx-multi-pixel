@@ -1,12 +1,9 @@
 {
   "name": "ngx-multi-pixel",
   "description": "An Angular library to simplify the use of a Facebook Pixel.It supports multiple pixelIds",
-  "author": {
-    "name": "Abhinav Akhil",
-    "email": "abhinavakhil55@gmail.com"
-  },
+  "author": "Abhinav Akhil <abhinavakhil55@gmail.com>",
   "license": "MIT",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "repository": {
     "type": "git",
     "url": ""
@@ -24,5 +21,9 @@
   },
   "dependencies": {
     "tslib": ">=2.0.0"
+  },
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

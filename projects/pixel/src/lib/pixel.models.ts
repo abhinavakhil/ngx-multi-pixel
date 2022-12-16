@@ -2,7 +2,7 @@ export interface PixelConfiguration {
   /** Whether to start tracking immediately. Default is `false` */
   enabled?: boolean;
   /** Your Facebook Pixel ID */
-  pixelId: [];
+  pixelId: string[];
 }
 
 export interface PixelEventProperties {

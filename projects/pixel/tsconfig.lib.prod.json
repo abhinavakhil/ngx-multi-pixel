@@ -1,4 +1,5 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+// ngx-multi-pixel-1.1.1.tgz
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {

@@ -1,6 +1,6 @@
 {
-  "name": "ngx-multi-pixel-workspace",
-  "version": "1.0.0",
+  "name": "ngx-multi-pixel",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -42,7 +42,7 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "![ngx-pixel header](https://storage.googleapis.com/nielskersic/static-images/github/ngx-pixel%20header-min.png)",
+  "description": "![ngx-multi-pixel header](https://storage.googleapis.com/nielskersic/static-images/github/ngx-pixel%20header-min.png)",
   "main": "index.js",
   "repository": {
     "type": "git",

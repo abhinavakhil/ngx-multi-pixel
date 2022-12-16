@@ -139,11 +139,11 @@ export class HomeComponent {
 In situations where the Pixel ID needs to be changed dynamically, this can be done using `initialize()` with the new Pixel ID as an optional argument.
 **Notes:**
 
-- A Pixel ID still needs to be provided when importing **_ngx-pixel_** in the module.
+- A Pixel ID still needs to be provided when importing **_ngx-multi-pixel_** in the module.
 - The previous instance should be removed with `remove()` before initializing a new Pixel ID.
 - This approach should **not** be used in combination with serverside rendering (SSR). As the module is initialized on each request, the Pixel script will default to the ID provided in the module.
 
-## Disabling **_ngx-pixel_**
+## Disabling **_ngx-multi-pixel_**
 
 Disabling works very similar to _enabling_ from within a component and looks like this:
 
@@ -165,7 +165,7 @@ export class HomeComponent {
 
 # Important notes
 
-- Backwards compatibility is not guaranteed. **_ngx-pixel_** was developed using Angular 11, which uses the Ivy compiler instead of the older View Engine compiler. If your project uses Angular 8 or earlier, or if you've decided to keep using View Engine with newer Angular versions, **_ngx-pixel_** might not be compatible, although I have not yet tested this to confirm.
+- Backwards compatibility is not guaranteed. **_ngx-multi-pixel_** was developed using Angular 11, which uses the Ivy compiler instead of the older View Engine compiler. If your project uses Angular 8 or earlier, or if you've decided to keep using View Engine with newer Angular versions, **_ngx-multi-pixel_** might not be compatible, although I have not yet tested this to confirm.
 
 ---
 
@@ -177,4 +177,4 @@ export class HomeComponent {
 
 ---
 
-Created with ❤️ by Niels Kersic, [niels.codes](https://niels.codes).
+Created with ❤️ by Abhinav Akhil, inspired from [niels.codes](https://niels.codes).

@@ -61,7 +61,7 @@ export class PixelService {
       return;
     }
     this.config.enabled = true;
-    this.addPixelScript([...pixelId]);
+    this.addPixelScript(pixelId);
   }
 
   /** Remove the Pixel tracking script */

@@ -20,7 +20,7 @@ export class PixelModule {
   ) {
     if (!PixelModule.config) {
       throw Error(
-        'ngx-multi-pixel not configured correctly. Pass the `pixelId` property to the `forRoot()` function'
+        ' not configured correctly. Pass the `pixelId` property to the `forRoot()` function'
       );
     }
     if (PixelModule.config.enabled && isPlatformBrowser(platformId)) {

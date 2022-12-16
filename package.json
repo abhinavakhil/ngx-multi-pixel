@@ -1,6 +1,6 @@
 {
-  "name": "ngx-pixel-workspace",
-  "version": "0.0.0",
+  "name": "ngx-multi-pixel-workspace",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~11.0.1",
     "@angular/common": "~11.0.1",
@@ -41,5 +41,23 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "description": "![ngx-pixel header](https://storage.googleapis.com/nielskersic/static-images/github/ngx-pixel%20header-min.png)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavakhil/ngx-multi-pixel.git"
+  },
+  "keywords": [
+    "angular",
+    "facebook-pixels",
+    "angular-pixel",
+    "ngx-multi-pixels"
+  ],
+  "author": "Abhinav Akhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinavakhil/ngx-multi-pixel/issues"
+  },
+  "homepage": "https://github.com/abhinavakhil/ngx-multi-pixel#readme"
 }

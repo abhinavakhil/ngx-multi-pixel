@@ -2,7 +2,7 @@ export interface PixelConfiguration {
   /** Whether to start tracking immediately. Default is `false` */
   enabled?: boolean;
   /** Your Facebook Pixel ID */
-  pixelId: string;
+  pixelId: [];
 }
 
 export interface PixelEventProperties {
@@ -59,43 +59,79 @@ export interface PixelEventProperties {
    * See {@link https://developers.facebook.com/docs/marketing-api/currencies Facebook Pixel docs - currency codes}
    */
   currency?:
-  'AED' | 'ARS' | 'AUD' |
-  'BDT' | 'BOB' | 'BRL' |
-  'CAD' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CZK' |
-  'DKK' | 'DZD' |
-  'EGP' | 'EUR' |
-  'GBP' | 'GTQ' |
-  'HKD' | 'HNL' | 'HUF' |
-  'IDR' | 'ILS' | 'INR' | 'ISK' |
-  'JPY' |
-  'KES' | 'KRW' |
-  'MOP' | 'MXN' | 'MYR' |
-  'NGN' | 'NIO' | 'NOK' | 'NZD' |
-  'PEN' | 'PHP' | 'PKR' | 'PLN' | 'PYG' |
-  'QAR' |
-  'RON' | 'RUB' |
-  'SAR' | 'SEK' | 'SGD' |
-  'THB' | 'TRY' | 'TWD' |
-  'USD' | 'UYU' |
-  'VEF' | 'VND' |
-  'ZAR';
+    | 'AED'
+    | 'ARS'
+    | 'AUD'
+    | 'BDT'
+    | 'BOB'
+    | 'BRL'
+    | 'CAD'
+    | 'CHF'
+    | 'CLP'
+    | 'CNY'
+    | 'COP'
+    | 'CRC'
+    | 'CZK'
+    | 'DKK'
+    | 'DZD'
+    | 'EGP'
+    | 'EUR'
+    | 'GBP'
+    | 'GTQ'
+    | 'HKD'
+    | 'HNL'
+    | 'HUF'
+    | 'IDR'
+    | 'ILS'
+    | 'INR'
+    | 'ISK'
+    | 'JPY'
+    | 'KES'
+    | 'KRW'
+    | 'MOP'
+    | 'MXN'
+    | 'MYR'
+    | 'NGN'
+    | 'NIO'
+    | 'NOK'
+    | 'NZD'
+    | 'PEN'
+    | 'PHP'
+    | 'PKR'
+    | 'PLN'
+    | 'PYG'
+    | 'QAR'
+    | 'RON'
+    | 'RUB'
+    | 'SAR'
+    | 'SEK'
+    | 'SGD'
+    | 'THB'
+    | 'TRY'
+    | 'TWD'
+    | 'USD'
+    | 'UYU'
+    | 'VEF'
+    | 'VND'
+    | 'ZAR';
 }
 
-export type PixelEventName = 'AddPaymentInfo' |
-'AddToCart' |
-'AddToWishlist' |
-'CompleteRegistration' |
-'Contact' |
-'CustomizeProduct' |
-'Donate' |
-'FindLocation' |
-'InitiateCheckout' |
-'Lead' |
-'PageView' |
-'Purchase' |
-'Schedule' |
-'Search' |
-'StartTrial' |
-'SubmitApplication' |
-'Subscribe' |
-'ViewContent';
+export type PixelEventName =
+  | 'AddPaymentInfo'
+  | 'AddToCart'
+  | 'AddToWishlist'
+  | 'CompleteRegistration'
+  | 'Contact'
+  | 'CustomizeProduct'
+  | 'Donate'
+  | 'FindLocation'
+  | 'InitiateCheckout'
+  | 'Lead'
+  | 'PageView'
+  | 'Purchase'
+  | 'Schedule'
+  | 'Search'
+  | 'StartTrial'
+  | 'SubmitApplication'
+  | 'Subscribe'
+  | 'ViewContent';

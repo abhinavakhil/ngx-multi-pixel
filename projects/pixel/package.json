@@ -1,16 +1,15 @@
 {
-  "name": "ngx-pixel",
-  "description": "An Angular library to simplify the use of a Facebook Pixel.",
+  "name": "ngx-multi-pixel",
+  "description": "An Angular library to simplify the use of a Facebook Pixel.It supports multiple pixelIds",
   "author": {
-    "name": "Niels Kersic",
-    "email": "hi@niels.codes",
-    "url": "https://niels.codes"
+    "name": "Abhinav Akhil",
+    "email": "abhinavakhil55@gmail.com"
   },
   "license": "MIT",
   "version": "1.1.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NielsKersic/ngx-pixel"
+    "url": ""
   },
   "keywords": [
     "angular",

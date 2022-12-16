@@ -1,5 +1,16 @@
-import { PixelEventName, PixelConfiguration, PixelEventProperties } from './pixel.models';
-import { Inject, Injectable, Optional, PLATFORM_ID, Renderer2, RendererFactory2 } from '@angular/core';
+import {
+  PixelEventName,
+  PixelConfiguration,
+  PixelEventProperties,
+} from './pixel.models';
+import {
+  Inject,
+  Injectable,
+  Optional,
+  PLATFORM_ID,
+  Renderer2,
+  RendererFactory2,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs/operators';
@@ -7,12 +18,11 @@ import { filter } from 'rxjs/operators';
 declare const fbq: any;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PixelService {
-
   private doc: Document;
-  private renderer: Renderer2
+  private renderer: Renderer2;
 
   constructor(
     @Inject('config') private config: PixelConfiguration,
@@ -21,7 +31,6 @@ export class PixelService {
     @Optional() private router: Router,
     private rendererFactory: RendererFactory2
   ) {
-
     // DOCUMENT cannot be injected directly as Document type, see https://github.com/angular/angular/issues/20351
     // It is therefore injected as any and then cast to Document
     this.doc = injectedDocument as Document;
@@ -29,15 +38,14 @@ export class PixelService {
 
     if (router) {
       // Log page views after router navigation ends
-      router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
-
-        if (this.isLoaded()) {
-          this.track('PageView');
-        }
-
-      });
+      router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe((event) => {
+          if (this.isLoaded()) {
+            this.track('PageView');
+          }
+        });
     }
-
   }
 
   /**
@@ -47,11 +55,13 @@ export class PixelService {
    */
   initialize(pixelId = this.config.pixelId): void {
     if (this.isLoaded()) {
-      console.warn('Tried to initialize a Pixel instance while another is already active. Please call `remove()` before initializing a new instance.');
+      console.warn(
+        'Tried to initialize a Pixel instance while another is already active. Please call `remove()` before initializing a new instance.'
+      );
       return;
     }
     this.config.enabled = true;
-    this.addPixelScript(pixelId);
+    this.addPixelScript([...pixelId]);
   }
 
   /** Remove the Pixel tracking script */
@@ -67,16 +77,15 @@ export class PixelService {
    * @param eventName The name of the event that is being tracked
    * @param properties Optional properties of the event
    */
-  track(
-    eventName: PixelEventName,
-    properties?: PixelEventProperties
-  ): void {
+  track(eventName: PixelEventName, properties?: PixelEventProperties): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
     if (!this.isLoaded()) {
-      console.warn('Tried to track an event without initializing a Pixel instance. Call `initialize()` first.');
+      console.warn(
+        'Tried to track an event without initializing a Pixel instance. Call `initialize()` first.'
+      );
       return;
     }
 
@@ -85,7 +94,6 @@ export class PixelService {
     } else {
       fbq('track', eventName);
     }
-
   }
 
   /**
@@ -101,7 +109,9 @@ export class PixelService {
     }
 
     if (!this.isLoaded()) {
-      console.warn('Tried to track an event without initializing a Pixel instance. Call `initialize()` first.');
+      console.warn(
+        'Tried to track an event without initializing a Pixel instance. Call `initialize()` first.'
+      );
       return;
     }
 
@@ -116,7 +126,7 @@ export class PixelService {
    * Adds the Facebook Pixel tracking script to the application
    * @param pixelId The Facebook Pixel ID to use
    */
-  private addPixelScript(pixelId: string): void {
+  private addPixelScript(pixelId: string[]): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
@@ -130,9 +140,9 @@ export class PixelService {
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '${pixelId}');
-    fbq('track', 'PageView');`;
-
+    ${pixelId.map((id) => fbq('init', id))};
+    fbq('track', 'PageView');
+    `;
 
     const scriptElement = this.renderer.createElement('script');
     this.renderer.setAttribute(scriptElement, 'id', 'pixel-script');
@@ -160,5 +170,4 @@ export class PixelService {
     }
     return false;
   }
-
 }

@@ -1,3 +1,4 @@
+![ngx-multi-pixel header](https://repository-images.githubusercontent.com/315121543/bd67de80-2d1b-11eb-92b9-05272a615364)
 
 <p align="center">
 An Angular library to simplify tracking using a Facebook Pixel. It supports multiple pixel Ids.
@@ -37,7 +38,7 @@ import { PixelModule } from "ngx-multi-pixel";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    PixelModule.forRoot({ enabled: true, pixelId: "YOUR_PIXEL_ID" }),
+    PixelModule.forRoot({ enabled: true, pixelId: "[YOUR_PIXEL_ID]" }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,6 @@
 
 <p align="center">
-An Angular library to simplify tracking using a Facebook Pixel. It supports multiple pixel ids.
+An Angular library to simplify tracking using a Facebook Pixel. It supports multiple pixel Ids.
 </p>
 
 ---

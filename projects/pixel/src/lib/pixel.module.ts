@@ -29,8 +29,8 @@ export class PixelModule {
   }
 
   /**
+   * @description
    * Initiale the Facebook Pixel Module
-   *
    * Add your Pixel ID as parameter
    */
   static forRoot(config: PixelConfiguration): ModuleWithProviders<PixelModule> {
@@ -45,6 +45,7 @@ export class PixelModule {
   }
 
   /**
+   * @description
    * Verifies the Pixel ID that was passed into the configuration.
    * - Checks if Pixel was initialized
    * @param pixelId Pixel ID to verify

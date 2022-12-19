@@ -1,7 +1,5 @@
-![ngx-multi-pixel header](https://storage.googleapis.com/nielskersic/static-images/github/ngx-pixel%20header-min.png)
-
 <p align="center">
-An Angular library to simplify tracking using a Facebook Pixel.
+An Angular library to simplify tracking using a Facebook Pixel. It supports multiple pixel Ids.
 </p>
 
 ---
@@ -38,7 +36,7 @@ import { PixelModule } from "ngx-multi-pixel";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    PixelModule.forRoot({ enabled: true, pixelId: "YOUR_PIXEL_ID" }),
+    PixelModule.forRoot({ enabled: true, pixelId: ["YOUR_PIXEL_IDS"] }),
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -112,7 +110,7 @@ When adding **_ngx-multi-pixel_** to `app.module.ts`, add the parameter `enabled
 ```TypeScript
 imports: [
   BrowserModule,
-  PixelModule.forRoot({ enabled: true, pixelId: 'YOUR_PIXEL_ID'})
+  PixelModule.forRoot({ enabled: true, pixelId: ["YOUR_PIXEL_IDS"]})
 ],
 ```
 
@@ -129,6 +127,7 @@ export class HomeComponent {
 
   onConsent(): void {
     this.pixel.initialize();
+    // this.pixel.initialize(['pixelId1', 'pixelId2',...]);
   }
 
 }

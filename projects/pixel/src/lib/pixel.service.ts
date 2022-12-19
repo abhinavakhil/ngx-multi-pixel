@@ -49,6 +49,7 @@ export class PixelService {
   }
 
   /**
+   * @description
    * Initialize the Pixel tracking script
    * - Adds the script to page's head
    * - Tracks first page view
@@ -64,13 +65,16 @@ export class PixelService {
     this.addPixelScript(pixelId);
   }
 
-  /** Remove the Pixel tracking script */
+  /**
+   * @description
+   * Remove the Pixel tracking script */
   remove(): void {
     this.removePixelScript();
     this.config.enabled = false;
   }
 
   /**
+   * @description
    * Track a Standard Event as predefined by Facebook
    *
    * See {@link https://developers.facebook.com/docs/facebook-pixel/reference Facebook Pixel docs - reference}
@@ -97,6 +101,7 @@ export class PixelService {
   }
 
   /**
+   * @description
    * Track a custom Event
    *
    * See {@link https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#custom-conversions Facebook Pixel docs - custom conversions}
@@ -123,6 +128,7 @@ export class PixelService {
   }
 
   /**
+   * @description
    * Adds the Facebook Pixel tracking script to the application
    * @param pixelId The Facebook Pixel ID to use
    */
@@ -151,7 +157,10 @@ export class PixelService {
     this.renderer.appendChild(this.doc.head, scriptElement);
   }
 
-  /** Remove Facebook Pixel tracking script from the application */
+  /**
+   * @description
+   * Remove Facebook Pixel tracking script from the application
+   */
   private removePixelScript(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
@@ -162,7 +171,10 @@ export class PixelService {
     }
   }
 
-  /** Checks if the script element is present */
+  /**
+   * @description
+   * Checks if the script element is present
+   */
   private isLoaded(): boolean {
     if (isPlatformBrowser(this.platformId)) {
       const pixelElement = this.doc.getElementById('pixel-script');

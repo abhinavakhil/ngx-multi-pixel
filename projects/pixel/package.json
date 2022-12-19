@@ -1,6 +1,6 @@
 {
   "name": "ngx-multi-pixel",
-  "description": "An Angular library to simplify the use of a Facebook Pixel.It supports multiple pixelIds",
+  "description": "An Angular library to simplify the use of a Facebook Pixel. It supports multiple pixelIds",
   "author": "Abhinav Akhil <abhinavakhil55@gmail.com>",
   "license": "MIT",
   "version": "1.2.1",
@@ -13,6 +13,7 @@
     "facebook pixel",
     "analytics",
     "tracking",
+    "ngx-multi-pixel",
     "typescript"
   ],
   "peerDependencies": {

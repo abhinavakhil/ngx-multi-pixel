@@ -42,11 +42,14 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "![ngx-multi-pixel header](https://storage.googleapis.com/nielskersic/static-images/github/ngx-pixel%20header-min.png)",
+  "description": "![ngx-multi-pixel header](https://repository-images.githubusercontent.com/315121543/bd67de80-2d1b-11eb-92b9-05272a615364)",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abhinavakhil/ngx-multi-pixel.git"
+  },
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "angular",

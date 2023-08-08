@@ -6,6 +6,11 @@ An Angular library to simplify tracking using a Facebook Pixel. It supports mult
 
 ---
 
+# Warning 
+Do not confuse with [ngx-pixel](npmjs.com/package/ngx-pixel) This project is its spiritual successor with extra features to add multiple pixel ids.
+
+The intention of this project is to maintain and evolve the solution due to the original owner not working actively on it anymore.
+
 # Introduction
 
 Using a Facebook Pixel is fairly simple. You add the script to the `head` section of all pages, after which you can use the `fbq` function. However, in Angular it's not as straight-forward. The main two problems are as follows:

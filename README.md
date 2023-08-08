@@ -7,7 +7,7 @@ An Angular library to simplify tracking using a Facebook Pixel. It supports mult
 ---
 
 # Warning 
-Do not confuse with [ngx-pixel](npmjs.com/package/ngx-pixel) This project is its spiritual successor with extra features to add multiple pixel ids.
+Do not confuse with [ngx-pixel](https://www.npmjs.com/package/ngx-pixel) This project is its spiritual successor with extra features to add multiple pixel ids.
 
 The intention of this project is to maintain and evolve the solution due to the original owner not working actively on it anymore.
 

@@ -29,22 +29,9 @@
             "karmaConfig": "projects/pixel/karma.conf.js"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/pixel/tsconfig.lib.json",
-              "projects/pixel/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
       }
     }},
   "cli": {
     "analytics": "236561c0-2dd3-46bd-9c4c-605442e3815b"
-  },
-  "defaultProject": "pixel"
+  }
 }
